@@ -484,7 +484,7 @@ Transform:
   - {fileID: 1757660736}
   - {fileID: 558000636}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &264195606
 GameObject:
@@ -1974,7 +1974,7 @@ Transform:
   m_Children:
   - {fileID: 201360551}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1693871494
 GameObject:
@@ -2115,6 +2115,7 @@ RectTransform:
   m_Children:
   - {fileID: 1142494688}
   - {fileID: 1693871495}
+  - {fileID: 1978817886}
   m_Father: {fileID: 1062626542}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2199,74 +2200,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1978817885}
   m_CullTransparentMesh: 1
---- !u!1 &2130633056
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2130633059}
-  - component: {fileID: 2130633058}
-  - component: {fileID: 2130633057}
-  m_Layer: 0
-  m_Name: EventSystem
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &2130633057
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2130633056}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SendPointerHoverToParent: 1
-  m_HorizontalAxis: Horizontal
-  m_VerticalAxis: Vertical
-  m_SubmitButton: Submit
-  m_CancelButton: Cancel
-  m_InputActionsPerSecond: 10
-  m_RepeatDelay: 0.5
-  m_ForceModuleActive: 0
---- !u!114 &2130633058
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2130633056}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_FirstSelected: {fileID: 0}
-  m_sendNavigationEvents: 1
-  m_DragThreshold: 10
---- !u!4 &2130633059
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2130633056}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &127652523045100680
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2421,9 +2354,12 @@ GameObject:
   - component: {fileID: 5359839073543378282}
   - component: {fileID: 4482093528146469473}
   - component: {fileID: 181638500838413683}
+  - component: {fileID: 9090928057889849073}
+  - component: {fileID: 9090928057889849072}
+  - component: {fileID: 9090928057889849071}
   - component: {fileID: 9090928057889849070}
   m_Layer: 7
-  m_Name: Player
+  m_Name: Jester1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3081,8 +3017,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2842646184217859282}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -15.82, y: 1.16, z: 0}
-  m_LocalScale: {x: 9.399757, y: 7.5740385, z: 7.9276094}
+  m_LocalPosition: {x: -16.21, y: 2.7, z: 0}
+  m_LocalScale: {x: 7.7222614, y: 7.5740385, z: 7.9276094}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4719958031308898193}
@@ -3105,6 +3041,56 @@ MonoBehaviour:
   itemLayer:
     serializedVersion: 2
     m_Bits: 64
+--- !u!114 &9090928057889849071
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2842646184217859282}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be7c57c741c011a499b751e7203014f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jesterMovement: {fileID: 9090928057889849072}
+  jesterThrowItem: {fileID: 9090928057889849073}
+  BANANA_PEEL: {fileID: 0}
+  BOMB: {fileID: 7833528516718417406, guid: 089a5de8f14f0fb478e8eff122c4468c, type: 3}
+  RAKE: {fileID: 0}
+  item: BOMB
+  facing: right
+--- !u!114 &9090928057889849072
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2842646184217859282}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bfbc1b5b16759dc46abef987f910516b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 20
+  maxHorSpeed: 5
+  onGround: 0
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 8
+  jester: {fileID: 9090928057889849071}
+--- !u!114 &9090928057889849073
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2842646184217859282}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90097fddc959d0043b97fe1ef41a3173, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &9128431846913442867
 Transform:
   m_ObjectHideFlags: 0

@@ -49,7 +49,7 @@ public class JesterThrowItem : MonoBehaviour
 
                     Rigidbody2D itemrb = newItem.GetComponent<Rigidbody2D>();
 
-                    itemrb.velocity = getItemVel();
+                    itemrb.velocity += getItemVel();
 
                     jester.item = "";
                 }
