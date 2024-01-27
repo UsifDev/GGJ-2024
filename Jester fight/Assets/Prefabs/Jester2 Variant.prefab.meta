@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Jester fight/Assets/Prefabs/Jester2 Variant.prefab.meta
 guid: afe18465d822b1d46b678208aec9f1c8
+========
+guid: 089a5de8f14f0fb478e8eff122c4468c
+>>>>>>>> item-spawning-and-collecting:Jester fight/Assets/Prefabs/Bomb.prefab.meta
 PrefabImporter:
   externalObjects: {}
   userData: 
