@@ -149,9 +149,6 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 292218780}
   m_Enabled: 1
-<<<<<<< HEAD:Jester fight/Assets/Scenes/Level.unity
---- !u!20 &292218782
-=======
 --- !u!114 &519420030
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -186,7 +183,6 @@ MonoBehaviour:
   m_RequiresColorTexture: 0
   m_Version: 2
 --- !u!20 &519420031
->>>>>>> develop:Jester fight/Assets/Scenes/SampleScene.unity
 Camera:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -244,8 +240,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-<<<<<<< HEAD:Jester fight/Assets/Scenes/Level.unity
-=======
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -357,4 +351,3 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
->>>>>>> develop:Jester fight/Assets/Scenes/SampleScene.unity

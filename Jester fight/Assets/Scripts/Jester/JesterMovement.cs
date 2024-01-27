@@ -13,9 +13,12 @@ public class JesterMovement : MonoBehaviour
 
     public LayerMask groundLayer;
 
+    public Jester jester;
+
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        jester = GetComponent<Jester>();
         jName = gameObject.name;
     }
 
@@ -24,6 +27,14 @@ public class JesterMovement : MonoBehaviour
     private void MoveH()
     {
         float movH = Input.GetAxis(jName + "H");
+        if (movH > 0)
+        {
+            jester.facing = "right";
+        }
+        else if (movH < 0)
+        {
+            jester.facing = "left";
+        }
         jesterVel.x = movH * speed * Time.deltaTime;
     }
 
