@@ -1,9 +1,5 @@
 fileFormatVersion: 2
-<<<<<<<< HEAD:Jester fight/Assets/Prefabs/Jester1.prefab.meta
-guid: 5e692ff0f7c552f44a696fbc086d35c8
-========
 guid: 6e60259c055736e49b73d1523a543084
->>>>>>>> item-spawning-and-collecting:Jester fight/Assets/Prefabs/BananaPeel.prefab.meta
 PrefabImporter:
   externalObjects: {}
   userData: 
