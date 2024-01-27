@@ -44,7 +44,6 @@ public class JesterMovement : MonoBehaviour
         if (onGround)
         {
             rb.AddForce(Vector2.up * 400);
-            onGround = false;
         }
     }
 
@@ -84,7 +83,17 @@ public class JesterMovement : MonoBehaviour
             if (collision.gameObject.layer == 3)
             {
                 onGround = true;
-                Debug.Log("test");
+            }
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (onGround)
+        {
+            if (collision.gameObject.layer == 3)
+            {
+                onGround = false;
             }
         }
     }
