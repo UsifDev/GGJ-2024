@@ -6,14 +6,13 @@ public class JesterMovement : MonoBehaviour
 {
     private Rigidbody2D rb;
     private Vector2 jesterVel;
-    public float speed = 20f;
-    public float maxSpeed = 5f;
-    public float jumpHeight = 20f;
+    public float speed = 5;
+    public float maxSpeed = 1000f;
+    public float jumpHeight = 100f;
 
-    private string jName; // either Jester1 or Jester2 bruh
+    private string jName; // either Jester1 or Jester2
 
     private bool onGround;
-    public float gravity = 9.8f;
     public LayerMask groundLayer;
 
     private void Start()
@@ -31,6 +30,8 @@ public class JesterMovement : MonoBehaviour
         jesterVel.x = movH * speed * Time.deltaTime;
     }
 
+    /*
+
     // Jump
     private void Jump() 
     { 
@@ -44,22 +45,10 @@ public class JesterMovement : MonoBehaviour
         }
     }
 
-    
-    private void ApplyGravity()
-    {
-        if (!onGround)
-        {
-            jesterVel.y -= gravity * Time.deltaTime;
-        }
-        else
-        {
-            jesterVel.y = 0;
-        }
-    }
 
-    private void CollisionGround()
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(rb.IsTouchingLayers(groundLayer))
+        if (collision.gameObject.tag == "Platform")
         {
             onGround = true;
         }
@@ -68,38 +57,16 @@ public class JesterMovement : MonoBehaviour
             onGround = false;
         }
     }
-
-    private void Limit(Vector2 v)
-    {
-        float x = 0;
-        float y = 0;
-        if (v.x > 0)
-        {
-            x = Mathf.Clamp(v.x, v.x, maxSpeed * Time.deltaTime);
-        }
-        else if (v.x < 0)
-        {
-            x = Mathf.Clamp(v.x, -maxSpeed * Time.deltaTime, v.x);
-        }
-
-        if (v.y > 0)
-        {
-            y = Mathf.Clamp(v.y, v.y, maxSpeed * Time.deltaTime);
-        }
-        else if (v.y < 0)
-        {
-            y = Mathf.Clamp(v.y, -maxSpeed * Time.deltaTime, v.y);
-        }
-    }
+    */
 
 
     // Makes the jester move
     public void Update()
     {
-        CollisionGround();
-        ApplyGravity();
         MoveH();
-        Jump();
-        rb.velocity += jesterVel;
+        // Jump();
+        rb.velocity = jesterVel;
+        // rb.velocity = Limit(rb.velocity);
+        Debug.Log(onGround + ", " + rb.velocity);
     }
 }
