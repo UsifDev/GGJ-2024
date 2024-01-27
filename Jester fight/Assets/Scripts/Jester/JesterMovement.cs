@@ -4,20 +4,50 @@ using UnityEngine;
 
 public class JesterMovement : MonoBehaviour
 {
-    private CharacterController characterController;
+    private Rigidbody2D rb;
     private Vector2 jesterVel;
-    private float speed;
+    public float speed = 5f;
+    public float maxHorSpeed = 5f;
+
+    private string jName; // either Jester1 or Jester2
+
+    public LayerMask groundLayer;
 
     private void Start()
     {
-        characterController = GetComponent<CharacterController>();
-        speed = 5f;
+        rb = GetComponent<Rigidbody2D>();
+        jName = gameObject.name;
     }
 
+
+    // Move in the horizontal axis
+    private void MoveH()
+    {
+        float movH = Input.GetAxis(jName + "H");
+        jesterVel.x = movH * speed * Time.deltaTime;
+    }
+
+
+    private Vector2 Limit(Vector2 v)
+    {
+        float x = v.x;
+        if(v.x > maxHorSpeed)
+        {
+            x = maxHorSpeed;
+        }
+        else if (v.x < -maxHorSpeed)
+        {
+            x = -maxHorSpeed;
+        }
+
+        return new Vector2 (x, v.y);
+    }
+
+    // Makes the jester move
     public void Update()
     {
-        float movH = Input.GetAxis("Jester1H");
-        jesterVel.x = movH * speed * Time.deltaTime;
-        characterController.Move(jesterVel);
+        MoveH();
+        rb.velocity += jesterVel;
+        rb.velocity = Limit(rb.velocity);
     }
 }
