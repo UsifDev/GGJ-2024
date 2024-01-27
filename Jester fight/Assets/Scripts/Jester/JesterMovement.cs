@@ -4,15 +4,20 @@ using UnityEngine;
 
 public class JesterMovement : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private CharacterController characterController;
+    private Vector2 jesterVel;
+    private float speed;
+
+    private void Start()
     {
-        
+        characterController = GetComponent<CharacterController>();
+        speed = 5f;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void Update()
     {
-        
+        float movH = Input.GetAxis("Jester1H");
+        jesterVel.x = movH * speed * Time.deltaTime;
+        characterController.Move(jesterVel);
     }
 }

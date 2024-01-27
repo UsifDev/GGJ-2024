@@ -4,13 +4,17 @@ using UnityEngine;
 
 public class Jester : MonoBehaviour
 {
-    public 
+    public JesterItem jesterItem;
+    public JesterMovement jesterMovement;
+    public JesterMeter jesterMeter;
 
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-        
+        jesterItem = GetComponent<JesterItem>();
+        jesterMovement = GetComponent<JesterMovement>();
+        jesterMeter = GetComponent<JesterMeter>();
     }
 
     // Update is called once per frame
