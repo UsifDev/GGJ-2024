@@ -5,7 +5,6 @@ using UnityEngine;
 public class Jester : MonoBehaviour
 {
     public JesterMovement jesterMovement;
-    public JesterMeter jesterMeter;
     public JesterThrowItem jesterThrowItem;
 
 
@@ -21,7 +20,6 @@ public class Jester : MonoBehaviour
     void Awake()
     {
         jesterMovement = GetComponent<JesterMovement>();
-        jesterMeter = GetComponent<JesterMeter>();
         jesterThrowItem = GetComponent<JesterThrowItem>();
     }
 
