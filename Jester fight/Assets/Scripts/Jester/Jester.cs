@@ -6,6 +6,7 @@ public class Jester : MonoBehaviour
 {
     public JesterMovement jesterMovement;
     public JesterMeter jesterMeter;
+    public JesterThrowItem jesterThrowItem;
 
 
     public GameObject BANANA_PEEL;
@@ -21,11 +22,12 @@ public class Jester : MonoBehaviour
     {
         jesterMovement = GetComponent<JesterMovement>();
         jesterMeter = GetComponent<JesterMeter>();
+        jesterThrowItem = GetComponent<JesterThrowItem>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        jesterThrowItem.Throw();
     }
 }

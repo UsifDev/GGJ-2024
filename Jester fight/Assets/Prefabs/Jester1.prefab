@@ -10,7 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1437815955301608155}
   - component: {fileID: 1437815955301608154}
+  - component: {fileID: -3976313678952773579}
   - component: {fileID: 1437815955301608151}
+  - component: {fileID: -8196653291636936250}
   - component: {fileID: 1437815955301608152}
   - component: {fileID: 1437815955301608153}
   m_Layer: 0
@@ -87,6 +89,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &-3976313678952773579
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1437815955301608156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 693e2d77f7222ca4abb7396e60febedb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jesterMovement: {fileID: 0}
+  jesterMeter: {fileID: 0}
+  BANANA_PEEL: {fileID: 0}
+  BOMB: {fileID: 1156211470075984532, guid: a0388dcda68037145b9fe0bf066c3153, type: 3}
+  RAKE: {fileID: 0}
+  item: BOMB
+  facing: right
 --- !u!114 &1437815955301608151
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -104,6 +125,19 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 8
+  jester: {fileID: 0}
+--- !u!114 &-8196653291636936250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1437815955301608156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90097fddc959d0043b97fe1ef41a3173, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!61 &1437815955301608152
 BoxCollider2D:
   m_ObjectHideFlags: 0
