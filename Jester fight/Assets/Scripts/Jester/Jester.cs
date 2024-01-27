@@ -4,30 +4,22 @@ using UnityEngine;
 
 public class Jester : MonoBehaviour
 {
+    public JesterItem jesterItem;
     public JesterMovement jesterMovement;
     public JesterMeter jesterMeter;
-    public JesterThrowItem jesterThrowItem;
-
-
-    public GameObject BANANA_PEEL;
-    public GameObject BOMB;
-    public GameObject RAKE;
-
-    public string item = "BOMB";
-    public string facing = "right";
 
 
     // Start is called before the first frame update
     void Awake()
     {
+        jesterItem = GetComponent<JesterItem>();
         jesterMovement = GetComponent<JesterMovement>();
         jesterMeter = GetComponent<JesterMeter>();
-        jesterThrowItem = GetComponent<JesterThrowItem>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        jesterThrowItem.Throw();
+        
     }
 }
