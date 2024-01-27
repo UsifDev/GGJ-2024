@@ -4,24 +4,23 @@ using UnityEngine;
 
 public class JesterMovement : MonoBehaviour
 {
-    private CharacterController characterController;
+    private Rigidbody2D rb;
     private Vector2 jesterVel;
-    public float speed = 5f;
-    public float jumpHeight = 1000f;
+    public float speed = 20f;
+    public float maxSpeed = 5f;
+    public float jumpHeight = 20f;
 
-    private string jName; // either Jester1 or Jester2
+    private string jName; // either Jester1 or Jester2 bruh
 
     private bool onGround;
-    private float gravity = 9.8f;
-    private Ray ray;
-    private RaycastHit raycastHit;
+    public float gravity = 9.8f;
+    public LayerMask groundLayer;
 
     private void Start()
     {
-        characterController = GetComponent<CharacterController>();
+        rb = GetComponent<Rigidbody2D>();
         onGround = true;
         jName = gameObject.name;
-        ray = new Ray(transform.position, -transform.up);
     }
 
 
@@ -58,14 +57,38 @@ public class JesterMovement : MonoBehaviour
         }
     }
 
-    public void OnCollisionEnter(Collision collision)
+    private void CollisionGround()
     {
-        if (Physics.Raycast(ray, out raycastHit))
+        if(rb.IsTouchingLayers(groundLayer))
         {
-            if (raycastHit.collider.gameObject.name == "Platform")
-            {
-                onGround = true;
-            }
+            onGround = true;
+        }
+        else
+        {
+            onGround = false;
+        }
+    }
+
+    private void Limit(Vector2 v)
+    {
+        float x = 0;
+        float y = 0;
+        if (v.x > 0)
+        {
+            x = Mathf.Clamp(v.x, v.x, maxSpeed * Time.deltaTime);
+        }
+        else if (v.x < 0)
+        {
+            x = Mathf.Clamp(v.x, -maxSpeed * Time.deltaTime, v.x);
+        }
+
+        if (v.y > 0)
+        {
+            y = Mathf.Clamp(v.y, v.y, maxSpeed * Time.deltaTime);
+        }
+        else if (v.y < 0)
+        {
+            y = Mathf.Clamp(v.y, -maxSpeed * Time.deltaTime, v.y);
         }
     }
 
@@ -73,9 +96,10 @@ public class JesterMovement : MonoBehaviour
     // Makes the jester move
     public void Update()
     {
+        CollisionGround();
         ApplyGravity();
         MoveH();
         Jump();
-        characterController.Move(jesterVel);
+        rb.velocity += jesterVel;
     }
 }
