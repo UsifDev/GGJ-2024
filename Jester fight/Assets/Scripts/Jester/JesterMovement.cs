@@ -6,7 +6,7 @@ public class JesterMovement : MonoBehaviour
 {
     private Rigidbody2D rb;
     private Vector2 jesterVel;
-    public float speed = 5f;
+    public float speed = 15f;
     public float maxHorSpeed = 5f;
 
     private string jName; // either Jester1 or Jester2
