@@ -8,12 +8,12 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - Ground
+  - 
   - Water
   - UI
-  - Background
-  - Item
-  - Player
+  - 
+  - 
+  - 
   - 
   - 
   - 
@@ -41,6 +41,7 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+<<<<<<< HEAD
   - name: Background
     uniqueID: 3212741651
     locked: 0
@@ -53,3 +54,5 @@ TagManager:
   - name: Hand
     uniqueID: 3732054127
     locked: 0
+=======
+>>>>>>> develop
