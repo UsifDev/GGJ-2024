@@ -41,3 +41,18 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+<<<<<<< HEAD
+  - name: Background
+    uniqueID: 3212741651
+    locked: 0
+  - name: Item
+    uniqueID: 2642237187
+    locked: 0
+  - name: Player
+    uniqueID: 3936669
+    locked: 0
+  - name: Hand
+    uniqueID: 3732054127
+    locked: 0
+=======
+>>>>>>> develop
