@@ -2352,11 +2352,11 @@ GameObject:
   m_Component:
   - component: {fileID: 9090928057889849069}
   - component: {fileID: 5359839073543378282}
-  - component: {fileID: 4482093528146469473}
-  - component: {fileID: 181638500838413683}
   - component: {fileID: 9090928057889849073}
   - component: {fileID: 9090928057889849072}
   - component: {fileID: 9090928057889849071}
+  - component: {fileID: 4482093528146469473}
+  - component: {fileID: 181638500838413683}
   - component: {fileID: 9090928057889849070}
   m_Layer: 7
   m_Name: Jester1
@@ -3050,16 +3050,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 2842646184217859282}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: be7c57c741c011a499b751e7203014f7, type: 3}
+  m_Script: {fileID: 11500000, guid: 90097fddc959d0043b97fe1ef41a3173, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jesterMovement: {fileID: 9090928057889849072}
-  jesterThrowItem: {fileID: 9090928057889849073}
-  BANANA_PEEL: {fileID: 0}
-  BOMB: {fileID: 7833528516718417406, guid: 089a5de8f14f0fb478e8eff122c4468c, type: 3}
-  RAKE: {fileID: 0}
-  item: BOMB
-  facing: right
 --- !u!114 &9090928057889849072
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3069,16 +3062,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 2842646184217859282}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bfbc1b5b16759dc46abef987f910516b, type: 3}
+  m_Script: {fileID: 11500000, guid: 1b2ea80d71f9c2042b9be706a16a08b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 20
+  speed: 15
   maxHorSpeed: 5
   onGround: 0
   groundLayer:
     serializedVersion: 2
     m_Bits: 8
-  jester: {fileID: 9090928057889849071}
+  jester: {fileID: 9090928057889849073}
 --- !u!114 &9090928057889849073
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3088,9 +3081,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 2842646184217859282}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 90097fddc959d0043b97fe1ef41a3173, type: 3}
+  m_Script: {fileID: 11500000, guid: 6ff15b33e6bcb17459900b2c5ced8e69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  jesterMovement: {fileID: 9090928057889849072}
+  jesterThrowItem: {fileID: 9090928057889849071}
+  BANANA_PEEL: {fileID: 4694984015283933030, guid: 6e60259c055736e49b73d1523a543084, type: 3}
+  BOMB: {fileID: 7833528516718417406, guid: 089a5de8f14f0fb478e8eff122c4468c, type: 3}
+  RAKE: {fileID: 5034659091659502869, guid: 693fad73bd424924d87cbbaa43153d42, type: 3}
+  BALL: {fileID: 7731522501102873615, guid: ff6e96468575b06429e8c755fb5f671d, type: 3}
+  item: BOMB
+  facing: right
 --- !u!4 &9128431846913442867
 Transform:
   m_ObjectHideFlags: 0

@@ -11,6 +11,7 @@ public class Jester : MonoBehaviour
     public GameObject BANANA_PEEL;
     public GameObject BOMB;
     public GameObject RAKE;
+    public GameObject BALL;
 
     public string item = "BOMB";
     public string facing = "right";
@@ -27,5 +28,6 @@ public class Jester : MonoBehaviour
     void Update()
     {
         jesterThrowItem.Throw();
+        jesterMovement.UpdateMove();
     }
 }
