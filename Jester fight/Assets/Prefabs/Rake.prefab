@@ -144,7 +144,7 @@ GameObject:
   - component: {fileID: 7339057144239046167}
   - component: {fileID: -2721040075741723149}
   - component: {fileID: -2813951615250661387}
-  - component: {fileID: -5616611847149976217}
+  - component: {fileID: 2775003697399273698}
   m_Layer: 7
   m_Name: Rake
   m_TagString: Untagged
@@ -185,7 +185,7 @@ MonoBehaviour:
   actTimer: 0
   trapSet: 0
   itemTimer: 0
-  jester_obj: {fileID: 0}
+  jester_obj: {fileID: 5415265506852237696, guid: 5e692ff0f7c552f44a696fbc086d35c8, type: 3}
   amuse_m: 4
   rb: {fileID: 0}
 --- !u!50 &-2813951615250661387
@@ -209,8 +209,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!58 &-5616611847149976217
-CircleCollider2D:
+--- !u!61 &2775003697399273698
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -223,5 +223,15 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0

@@ -172,8 +172,9 @@ MonoBehaviour:
   BOMB: {fileID: 7833528516718417406, guid: 089a5de8f14f0fb478e8eff122c4468c, type: 3}
   RAKE: {fileID: 5034659091659502869, guid: 693fad73bd424924d87cbbaa43153d42, type: 3}
   BALL: {fileID: 7731522501102873615, guid: ff6e96468575b06429e8c755fb5f671d, type: 3}
-  item: BOMB
+  item: 
   facing: right
+  amusemeter: 0
 --- !u!114 &1332095765091277730
 MonoBehaviour:
   m_ObjectHideFlags: 0
