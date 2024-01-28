@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class JesterMovement : MonoBehaviour
 {
+    private Animator animator;
     private Rigidbody2D rb;
     private Vector2 jesterVel;
     public float speed = 15f;
@@ -18,6 +19,7 @@ public class JesterMovement : MonoBehaviour
 
     private void Start()
     {
+        animator = JesterHand.animator;
         rb = GetComponent<Rigidbody2D>();
         jester = GetComponent<Jester>();
         jName = gameObject.name;
@@ -52,12 +54,21 @@ public class JesterMovement : MonoBehaviour
     {
         float x = v.x;
         if(v.x > maxHorSpeed)
-        {
+        {  
             x = maxHorSpeed;
         }
         else if (v.x < -maxHorSpeed)
         {
             x = -maxHorSpeed;
+        }
+
+        if (x != 0)
+        {
+            animator.SetBool("isMoving", true);
+        }
+        else 
+        {
+            animator.SetBool("isMoving", false);
         }
 
         return new Vector2 (x, v.y);
@@ -83,6 +94,7 @@ public class JesterMovement : MonoBehaviour
             if (collision.gameObject.layer == 3)
             {
                 onGround = true;
+                animator.SetBool("isJumping", false);
             }
         }
     }
@@ -94,6 +106,7 @@ public class JesterMovement : MonoBehaviour
             if (collision.gameObject.layer == 3)
             {
                 onGround = false;
+                animator.SetBool("isJumping", true);
             }
         }
     }
