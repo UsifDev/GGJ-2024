@@ -47,6 +47,7 @@ public class JesterThrowItem : MonoBehaviour
                         case "BOMB": newItem = Instantiate(jester.BOMB, rb.position, Quaternion.identity); break;
                         case "BANANA PEEL": newItem = Instantiate(jester.BANANA_PEEL, rb.position, Quaternion.identity); break;
                         case "RAKE": newItem = Instantiate(jester.RAKE, rb.position, Quaternion.identity); break;
+                        case "BALL": newItem = Instantiate(jester.BALL, rb.position, Quaternion.identity); break;
                     }
 
                     Item item = newItem.GetComponent<Item>();
