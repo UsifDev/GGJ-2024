@@ -59,19 +59,14 @@ public class PlayerItemHandler : MonoBehaviour
         {
             case "Banana":
                 return Item.BANANA;
-            break;
             case "Rake":
                 return Item.RAKE;
-            break;
             case "Ball":
                 return Item.BALL;
-            break;
             case "Bomb":
                 return Item.BOMB;
-            break;
             default:
                 return Item.NONE;
-            break;
         }
     }
 }
