@@ -7,7 +7,8 @@ public class JesterMovement : MonoBehaviour
     private Rigidbody2D rb;
     private Vector2 jesterVel;
     public float speed = 15f;
-    public float maxHorSpeed = 5f;
+    public float maxHorSpeed = 8f;
+    public float jumpForce = 800f;
     public bool onGround = false;
 
     private string jName; // either Jester1 or Jester2
@@ -41,9 +42,14 @@ public class JesterMovement : MonoBehaviour
 
     private void Jump()
     {
-        if (onGround)
+        float movJ = Input.GetAxis(jName + "J");
+        if (movJ > 0)
         {
-            rb.AddForce(Vector2.up * 400);
+            if (onGround)
+            {
+                rb.AddForce(Vector2.up * jumpForce);
+                onGround = false;
+            }
         }
     }
 
@@ -65,12 +71,8 @@ public class JesterMovement : MonoBehaviour
 
     // Makes the jester move
     public void UpdateMove()
-    {
-        if (Input.GetKeyDown(KeyCode.W))
-        {
-            Jump();
-        }
-
+    {   
+        Jump();
         MoveH();
         rb.velocity += jesterVel;
         rb.velocity = Limit(rb.velocity);
