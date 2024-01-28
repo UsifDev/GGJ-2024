@@ -6,7 +6,7 @@ public class JesterMovement : MonoBehaviour
 {
     private Rigidbody2D rb;
     private Vector2 jesterVel;
-    public float speed = 5f;
+    public float speed = 15f;
     public float maxHorSpeed = 5f;
     public bool onGround = false;
 
@@ -64,7 +64,7 @@ public class JesterMovement : MonoBehaviour
     }
 
     // Makes the jester move
-    public void Update()
+    public void UpdateMove()
     {   
         if(Input.GetKeyDown(KeyCode.W))
         {

@@ -36,7 +36,8 @@ public class ItemSpawner : MonoBehaviour
     //user - defined functions
     private void SpawnItem(GameObject prefab, Vector3 position)
     {
-        Instantiate(prefab, position, Quaternion.identity);
+        GameObject newItem = Instantiate(prefab, position, Quaternion.identity);
+        newItem.GetComponent<Item>().SetSpawned();
     }
 
     private void SpawnRandomItem()
