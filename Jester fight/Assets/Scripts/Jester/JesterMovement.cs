@@ -30,18 +30,6 @@ public class JesterMovement : MonoBehaviour
         facingright = new Vector2(transform.localScale.x, transform.localScale.y);
     }
 
-    private void Flip() 
-    {
-        if (jester.facing == "right")
-        {
-            transform.localScale = facingleft;
-        }
-        if (jester.facing == "left") 
-        {
-            transform.localScale = facingright;
-        }
-    }
-
     // Move in the horizontal axis
     private void MoveH()
     {
