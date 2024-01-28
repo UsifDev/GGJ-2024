@@ -64,7 +64,7 @@ public class JesterMovement : MonoBehaviour
     }
 
     // Makes the jester move
-    public void Update()
+    public void UpdateMove()
     {   
         if(Input.GetKeyDown(KeyCode.W))
         {

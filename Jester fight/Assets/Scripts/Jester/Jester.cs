@@ -28,5 +28,6 @@ public class Jester : MonoBehaviour
     void Update()
     {
         jesterThrowItem.Throw();
+        jesterMovement.UpdateMove();
     }
 }
