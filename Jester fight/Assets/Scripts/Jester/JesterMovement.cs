@@ -57,7 +57,7 @@ public class JesterMovement : MonoBehaviour
     private Vector2 Limit(Vector2 v)
     {
         float x = v.x;
-        if(v.x > maxHorSpeed)
+        if (v.x > maxHorSpeed)
         {
             x = maxHorSpeed;
         }
@@ -66,7 +66,7 @@ public class JesterMovement : MonoBehaviour
             x = -maxHorSpeed;
         }
 
-        return new Vector2 (x, v.y);
+        return new Vector2(x, v.y);
     }
 
     // Makes the jester move
