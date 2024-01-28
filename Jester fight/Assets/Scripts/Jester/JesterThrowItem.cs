@@ -22,11 +22,11 @@ public class JesterThrowItem : MonoBehaviour
         float throwVel = 0;
         if(jester.facing == "right")
         {
-            throwVel = 15f;
+            throwVel = 30f;
         }
         else if (jester.facing == "left")
         {
-            throwVel = -15f;
+            throwVel = -30f;
         }
         return new Vector2(rb.velocity.x + throwVel, 0f);
     }
@@ -52,7 +52,7 @@ public class JesterThrowItem : MonoBehaviour
 
                     Item item = newItem.GetComponent<Item>();
 
-                    item.SetThrown(this.tag, 1f, getItemVel());
+                    item.SetThrown(1f, getItemVel());
 
                     jester.item = "";
                 }

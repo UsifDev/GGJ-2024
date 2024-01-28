@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7391763022456015126}
   - component: {fileID: 6177712903752495307}
   - component: {fileID: 8684208702884290172}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Circle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -145,7 +145,7 @@ GameObject:
   - component: {fileID: -2721040075741723149}
   - component: {fileID: -2813951615250661387}
   - component: {fileID: -5616611847149976217}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Rake
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -183,8 +183,10 @@ MonoBehaviour:
   type: RAKE
   isPickUp: 0
   actTimer: 0
-  owner: 
   trapSet: 0
+  itemTimer: 0
+  jester_obj: {fileID: 0}
+  amuse_m: 4
   rb: {fileID: 0}
 --- !u!50 &-2813951615250661387
 Rigidbody2D:

@@ -9,11 +9,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5986793359430839679}
+  - component: {fileID: -5330315626972703499}
   - component: {fileID: 7765598072693203544}
   - component: {fileID: 2194354088215737593}
   - component: {fileID: 9220602704135788291}
   - component: {fileID: 2883651598261760943}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Bomb
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35,6 +36,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &-5330315626972703499
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7833528516718417406}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e9b8b21a12a69e40938b93b135181c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: BOMB
+  isPickUp: 0
+  actTimer: 0
+  trapSet: 0
+  itemTimer: 0
+  jester_obj: {fileID: 0}
+  amuse_m: 5
+  rb: {fileID: 0}
 --- !u!50 &7765598072693203544
 Rigidbody2D:
   serializedVersion: 4

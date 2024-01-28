@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3302634134179781315}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Ceiling check
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40,7 +40,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 404849113621007154}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Ground check
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -78,7 +78,7 @@ GameObject:
   - component: {fileID: 5937539520764954419}
   - component: {fileID: 7985084090102886433}
   - component: {fileID: 1332095765091277756}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Jester1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
