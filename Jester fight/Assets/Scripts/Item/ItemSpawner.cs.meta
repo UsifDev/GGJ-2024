@@ -3,7 +3,11 @@ guid: d0880e2565a109846bf5e97d7b64ccc7
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - bananaPeelItem: {fileID: 4694984015283933030, guid: 6e60259c055736e49b73d1523a543084, type: 3}
+  - rakeItem: {fileID: 5034659091659502869, guid: 693fad73bd424924d87cbbaa43153d42, type: 3}
+  - bombItem: {fileID: 7833528516718417406, guid: 089a5de8f14f0fb478e8eff122c4468c, type: 3}
+  - ballItem: {fileID: 7731522501102873615, guid: ff6e96468575b06429e8c755fb5f671d, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

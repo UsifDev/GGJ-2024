@@ -16,11 +16,9 @@ public class ItemSpawner : MonoBehaviour
 
     void Start()
     {
-        items = new GameObject[4];
-        items[0] = bananaPeelItem;
-        items[1] = rakeItem;
-        items[2] = bombItem;
-        items[3] = ballItem;
+        items = new GameObject[2];
+        items[0] = bombItem;
+        items[1] = ballItem;
 
         InvokeRepeating("SpawnRandomItem", 2.0f, 3.0f);
     }
@@ -43,7 +41,7 @@ public class ItemSpawner : MonoBehaviour
     private void SpawnRandomItem()
     {
         Vector3 position = new Vector3(Random.Range(leftMaximumPosition, RightMaximumPosition) ,spawnY ,0);
-        int itemIndex = Mathf.RoundToInt(Random.Range(0,4));
+        int itemIndex = Mathf.RoundToInt(Random.Range(0,2));
         SpawnItem(items[itemIndex], position);
     }
 

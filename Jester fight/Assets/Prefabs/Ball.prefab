@@ -9,10 +9,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7515086979595834310}
+  - component: {fileID: 3376745541395054092}
   - component: {fileID: 3982068225626852724}
   - component: {fileID: -2716309743003628751}
   - component: {fileID: 8950641220720661426}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Ball
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34,6 +35,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3376745541395054092
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7731522501102873615}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e9b8b21a12a69e40938b93b135181c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: BALL
+  isPickUp: 0
+  actTimer: 0
+  trapSet: 0
+  itemTimer: 0
+  jester_obj: {fileID: 5415265506852237696, guid: 5e692ff0f7c552f44a696fbc086d35c8, type: 3}
+  amuse_m: 2
+  rb: {fileID: 0}
 --- !u!50 &3982068225626852724
 Rigidbody2D:
   serializedVersion: 4

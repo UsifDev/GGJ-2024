@@ -11,7 +11,7 @@ public class JesterThrowItem : MonoBehaviour
     private void Awake()
     {
         jester = GetComponent<Jester>();
-        rb = GetComponent<Rigidbody2D>();
+        rb = jester.GetComponent<Rigidbody2D>();
         jName = gameObject.name;
     }
 
@@ -22,13 +22,27 @@ public class JesterThrowItem : MonoBehaviour
         float throwVel = 0;
         if(jester.facing == "right")
         {
-            throwVel = 15f;
+            throwVel = 30f;
         }
         else if (jester.facing == "left")
         {
-            throwVel = -15f;
+            throwVel = -30f;
         }
-        return new Vector2(rb.velocity.x + throwVel, 0f);
+        return new Vector2(throwVel, 0f);
+    }
+
+    private Vector2 getItemPos()
+    {
+        Vector2 res;
+        if (jester.facing == "right")
+        {
+            res = new Vector2(rb.position.x + 10f, 0f);
+        }
+        else
+        {
+            res = new Vector2(rb.position.x - 10f, 0f);
+        }
+        return res;
     }
 
     // Make the item thrown
@@ -42,17 +56,21 @@ public class JesterThrowItem : MonoBehaviour
                 if (jester.item != "")
                 {
                     GameObject newItem = null;
+
+
+
+                    Vector2 pos = getItemPos();
                     switch (jester.item)
                     {
                         case "BOMB": newItem = Instantiate(jester.BOMB, rb.position, Quaternion.identity); break;
-                        case "BANANA PEEL": newItem = Instantiate(jester.BANANA_PEEL, rb.position, Quaternion.identity); break;
+                        case "BANANA_PEEL": newItem = Instantiate(jester.BANANA_PEEL, rb.position, Quaternion.identity); break;
                         case "RAKE": newItem = Instantiate(jester.RAKE, rb.position, Quaternion.identity); break;
                         case "BALL": newItem = Instantiate(jester.BALL, rb.position, Quaternion.identity); break;
                     }
 
                     Item item = newItem.GetComponent<Item>();
 
-                    item.SetThrown(this.tag, 1f, getItemVel());
+                    item.SetThrown(1f, getItemVel());
 
                     jester.item = "";
                 }
