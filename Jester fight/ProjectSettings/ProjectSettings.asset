@@ -734,11 +734,11 @@ PlayerSettings:
   apiCompatibilityLevel: 6
   activeInputHandler: 0
   windowsGamepadBackendHint: 0
-  cloudProjectId: 
+  cloudProjectId: d396af02-7a62-4da6-b934-e405be336c77
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: 
-  organizationId: 
+  projectName: Jester fight
+  organizationId: usif01
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
   playerDataPath: 
