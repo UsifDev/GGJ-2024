@@ -12,10 +12,11 @@ public class JesterMovement : MonoBehaviour
     public bool onGround = false;
 
     private string jName; // either Jester1 or Jester2
-
     public LayerMask groundLayer;
-
     public Jester jester;
+
+    public Vector2 facingright;
+    public Vector2 facingleft;
 
     private void Start()
     {
@@ -23,8 +24,22 @@ public class JesterMovement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         jester = GetComponent<Jester>();
         jName = gameObject.name;
+
+        facingleft = new Vector2(-transform.localScale.x, transform.localScale.y);
+        facingright = new Vector2(transform.localScale.x, transform.localScale.y);
     }
 
+    private void Flip() 
+    {
+        if (jester.facing == "right")
+        {
+            transform.localScale = facingleft;
+        }
+        if (jester.facing == "left") 
+        {
+            transform.localScale = facingright;
+        }
+    }
 
     // Move in the horizontal axis
     private void MoveH()
@@ -33,10 +48,12 @@ public class JesterMovement : MonoBehaviour
         if (movH > 0)
         {
             jester.facing = "right";
+            transform.localScale = facingright;
         }
         else if (movH < 0)
         {
             jester.facing = "left";
+            transform.localScale = facingleft;
         }
         jesterVel.x = movH * speed * Time.deltaTime;
     }
