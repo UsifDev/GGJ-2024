@@ -186,9 +186,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b2ea80d71f9c2042b9be706a16a08b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 15
-  maxHorSpeed: 8
-  jumpForce: 800
+  speed: 1000
+  maxHorSpeed: 12
+  jumpForce: 1500
   onGround: 0
   groundLayer:
     serializedVersion: 2
@@ -237,7 +237,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 3
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
