@@ -31,7 +31,7 @@ public class JesterThrowItem : MonoBehaviour
         return new Vector2(rb.velocity.x + throwVel, 0f);
     }
 
-    // Make the item
+    // Make the item thrown
     public void Throw()
     {
         float button = Input.GetAxis(jName + "T");
@@ -45,11 +45,14 @@ public class JesterThrowItem : MonoBehaviour
                     switch (jester.item)
                     {
                         case "BOMB": newItem = Instantiate(jester.BOMB, rb.position, Quaternion.identity); break;
+                        case "BANANA PEEL": newItem = Instantiate(jester.BANANA_PEEL, rb.position, Quaternion.identity); break;
+                        case "RAKE": newItem = Instantiate(jester.RAKE, rb.position, Quaternion.identity); break;
+                        case "BALL": newItem = Instantiate(jester.BALL, rb.position, Quaternion.identity); break;
                     }
 
-                    Rigidbody2D itemrb = newItem.GetComponent<Rigidbody2D>();
+                    Item item = newItem.GetComponent<Item>();
 
-                    itemrb.velocity = getItemVel();
+                    item.SetThrown(this.tag, 1f, getItemVel());
 
                     jester.item = "";
                 }

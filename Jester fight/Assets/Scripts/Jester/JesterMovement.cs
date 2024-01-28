@@ -6,7 +6,15 @@ public class JesterMovement : MonoBehaviour
 {
     private CharacterController characterController;
     private Vector2 jesterVel;
-    private float speed;
+    public float speed = 15f;
+    public float maxHorSpeed = 5f;
+    public bool onGround = false;
+
+    private string jName; // either Jester1 or Jester2
+
+    public LayerMask groundLayer;
+
+    public Jester jester;
 
     private void Start()
     {
@@ -14,10 +22,78 @@ public class JesterMovement : MonoBehaviour
         speed = 5f;
     }
 
-    public void Update()
+
+    // Move in the horizontal axis
+    private void MoveH()
     {
-        float movH = Input.GetAxis("Jester1H");
+        float movH = Input.GetAxis(jName + "H");
+        if (movH > 0)
+        {
+            jester.facing = "right";
+        }
+        else if (movH < 0)
+        {
+            jester.facing = "left";
+        }
         jesterVel.x = movH * speed * Time.deltaTime;
-        characterController.Move(jesterVel);
+    }
+
+    private void Jump()
+    {
+        if (onGround)
+        {
+            rb.AddForce(Vector2.up * 400);
+        }
+    }
+
+
+    private Vector2 Limit(Vector2 v)
+    {
+        float x = v.x;
+        if(v.x > maxHorSpeed)
+        {
+            x = maxHorSpeed;
+        }
+        else if (v.x < -maxHorSpeed)
+        {
+            x = -maxHorSpeed;
+        }
+
+        return new Vector2 (x, v.y);
+    }
+
+    // Makes the jester move
+    public void UpdateMove()
+    {   
+        if(Input.GetKeyDown(KeyCode.W))
+        {
+            Jump();
+        }
+
+        MoveH();
+        rb.velocity += jesterVel;
+        rb.velocity = Limit(rb.velocity);
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (!onGround)
+        {
+            if (collision.gameObject.layer == 3)
+            {
+                onGround = true;
+            }
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (onGround)
+        {
+            if (collision.gameObject.layer == 3)
+            {
+                onGround = false;
+            }
+        }
     }
 }
